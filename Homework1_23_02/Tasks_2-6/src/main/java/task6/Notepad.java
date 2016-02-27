@@ -50,8 +50,8 @@ public class Notepad {
         return false;
     }
     public  boolean editNote (String note, int index ){
-        if (index < notes.length) {
-            notes[index] = new Note(note);
+        if (notes[index] != null && index < notes.length) {
+            notes[index].setNote(note);
             return true;
         }
         return false;
